@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,14 +30,12 @@
         body {
             background-color: #F4F1EC;
         }
-
         @media print {
             body { background-color: #F4F1EC !important; }
             .no-print { display: none !important; }
             .print-break { page-break-before: always; }
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
-
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
         }
@@ -51,9 +48,7 @@
         }
     </style>
 </head>
-
 <body class="text-deadly p-4 md:p-8 selection:bg-habanero selection:text-white">
-
     <div class="max-w-6xl mx-auto" id="cronograma-container">
         <!-- Encabezado Estilo Franco -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b-2 pb-6 border-jodhpur">
@@ -62,11 +57,18 @@
                 <h1 class="text-4xl font-bold text-deadly tracking-tight uppercase">Cronograma 2026</h1>
                 <p class="text-space font-medium mt-1 tracking-wide uppercase text-sm">Encuentros de Catequesis • Jesús Obrero</p>
             </div>
-            <div class="flex gap-3 mt-6 md:mt-0 no-print" id="action-buttons">
-                <button onclick="downloadImage()" class="bg-space hover:bg-[#1a2661] text-white font-semibold py-2.5 px-5 rounded shadow-md transition flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Descargar Imagen
-                </button>
+            
+            <div class="flex flex-col md:flex-row items-end md:items-center gap-4 mt-6 md:mt-0 no-print">
+                <nav class="flex gap-4 mb-2 md:mb-0">
+                    <a href="index.html" class="text-sm font-bold uppercase tracking-widest text-habanero border-b-2 border-habanero pb-1">Cronograma</a>
+                    <a href="guia-de-clases.html" class="text-sm font-bold uppercase tracking-widest text-deadly/60 hover:text-deadly transition pb-1">Guía de Clases</a>
+                </nav>
+                <div class="flex gap-3" id="action-buttons">
+                    <button onclick="downloadImage()" class="bg-space hover:bg-[#1a2661] text-white font-semibold py-2 px-4 rounded shadow-md transition flex items-center gap-2 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Descargar Imagen
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -146,100 +148,85 @@
         <!-- Detalle por Cursos -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- 1ER CICLO (Alineación corregida) -->
+            <!-- 1ER CICLO -->
             <div class="flex flex-col">
                 <div class="bg-habanero text-white font-bold py-3 px-6 rounded-t shadow-sm uppercase tracking-widest text-sm flex justify-between items-center">
                     <span>1er Ciclo</span>
                     <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded">Detalle Horario</span>
                 </div>
                 <div class="bg-white border-x border-b border-jodhpur rounded-b p-5 space-y-4 shadow-sm">
-                    
                     <div class="border-l-4 border-aster bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">1ro A</div>
                         <div class="text-sm font-semibold text-space">Martes 10:50 - 11:40</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">4to Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-aster bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">2do A</div>
                         <div class="text-sm font-semibold text-space">Lunes 10:50 - 11:40</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">4to Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-aster bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">3ro A</div>
                         <div class="text-sm font-semibold text-space">Lunes 10:50 - 11:40</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">4to Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-aster bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">1ro B</div>
                         <div class="text-sm font-semibold text-space">Martes 14:00 - 14:50</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">2do Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-aster bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">2do B</div>
                         <div class="text-sm font-semibold text-space">Martes 15:00 - 15:50</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">3er Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-aster bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">3ro B</div>
                         <div class="text-sm font-semibold text-space">Martes 13:05 - 13:50</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">1er Módulo</div>
                     </div>
-
                 </div>
             </div>
 
-            <!-- 2DO CICLO (Alineación corregida) -->
+            <!-- 2DO CICLO -->
             <div class="flex flex-col">
                 <div class="bg-space text-white font-bold py-3 px-6 rounded-t shadow-sm uppercase tracking-widest text-sm flex justify-between items-center">
                     <span>2do Ciclo</span>
                     <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded">Detalle Horario</span>
                 </div>
                 <div class="bg-white border-x border-b border-jodhpur rounded-b p-5 space-y-4 shadow-sm">
-                    
                     <div class="border-l-4 border-habanero bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">4to A</div>
                         <div class="text-sm font-semibold text-space">Martes 9:50 - 10:40</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">3er Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-habanero bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">5to A</div>
                         <div class="text-sm font-semibold text-space">Lunes 10:50 - 11:40</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">4to Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-habanero bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">6to A</div>
                         <div class="text-sm font-semibold text-space">Martes 10:50 - 11:40</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">4to Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-habanero bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">4to B</div>
                         <div class="text-sm font-semibold text-space">Martes 13:05 - 13:50</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">1er Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-habanero bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">5to B</div>
                         <div class="text-sm font-semibold text-space">Martes 14:00 - 14:50</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">2do Módulo</div>
                     </div>
-
                     <div class="border-l-4 border-habanero bg-luster/30 p-3 text-left">
                         <div class="font-bold text-deadly uppercase text-xs mb-1">6to B</div>
                         <div class="text-sm font-semibold text-space">Martes 15:00 - 15:50</div>
                         <div class="text-[10px] text-deadly/60 font-bold uppercase">3er Módulo</div>
                     </div>
-
                 </div>
             </div>
-
         </div>
 
         <!-- Footer Informativo -->
@@ -252,13 +239,18 @@
         function downloadImage() {
             const container = document.getElementById('cronograma-container');
             const btnContainer = document.getElementById('action-buttons');
+            const nav = document.querySelector('nav');
+            
             btnContainer.style.display = 'none';
-
+            if(nav) nav.style.display = 'none';
+            
             html2canvas(container, {
                 scale: 2,
                 backgroundColor: '#F4F1EC'
             }).then(canvas => {
                 btnContainer.style.display = 'flex';
+                if(nav) nav.style.display = 'flex';
+                
                 const link = document.createElement('a');
                 link.download = 'Cronograma_Encuentros_Pastoral_2026.png';
                 link.href = canvas.toDataURL('image/png');
@@ -267,6 +259,4 @@
         }
     </script>
 </body>
-
-
 </html>
